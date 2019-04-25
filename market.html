@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="project2.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="showcase">
+            <h1>WELCOME TO THE MARKET</h1>
+            <nav class="wezi"> 
+            <ul>
+                    <li><a href="file:///C:/Users/MAX/Desktop/PROJECT%20INF221/firstpage.html">HOME</a></li>
+            </ul>
+            </nav>
+    <form method="post">
+        seller's name<br>
+        <input type="text" name="name" id="pname"><br>
+        products and prices<br>
+        <textarea rows="5" cols="50" name="maxed" id="maxed"></textarea><br>
+        <button type="button" id ="pbutton">submit</button>
+    </form>
+    <div>seller's name<br>
+        <p id ="firp"></p><br>
+        products being sold and their prices
+        <p id ="secp"></p>
+    </div>
+</body>
+<script>
+    const pname = document.getElementById("pname");
+    const maxed = document.getElementById("maxed");
+    const pbutton = document.getElementById("pbutton");
+    const firp = document.getElementById("firp");
+    const secp = document.getElementById("secp");
+    pbutton.onclick = function(){
+        const name = pname.value;
+        const  products = maxed.value;
+        if(name && products !== ""){
+           firp.innerHTML = name;
+           secp.innerHTML = products;
+           localStorage.setItem('name',name);
+           localStorage.setItem('products',products);
+        }
+    }
+</script>
+</div>
+</html>

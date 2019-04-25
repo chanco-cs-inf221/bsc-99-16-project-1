@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="project2.css" />
+    <title>SIGN-IN/SIGN-UP</title>
+</head>
+<body>
+  
+        <div class="bit"
+        <h2>SIGN IN </h2>
+        <nav>
+        <ul>
+                <li><a href="file:///C:/Users/MAX/Desktop/PROJECT%20INF221/market.html">HOME</a></li>
+        </ul>
+        </nav>
+
+                             <form action="#" method="post" name="form_name" id="form_id" class="form_class">
+                                 <label>Name</label><br>
+                                 <input type="text" name="name" id="name" placeholder="enter your Name" /><br>
+                                 <label>password</label><br>
+                                 <input type="password" name="password" id="password" placeholder="enter password" /><br>
+                                 <a href="file:///C:/Users/MAX/Desktop/PROJECT%20INF221/market.html" class="btn">log in</a><br><br><br>
+                                 <a href="file:///C:/Users/MAX/Desktop/PROJECT%20INF221/recovery.html" class="btn">Forgot password?</a><br><br><br></li>
+                             </form>
+                         
+                    
+ 
+                                 
+                                     <h2>SIGN UP</h2>
+                                     <form action="#" method="post" name="signup" id="signup" class="signup">
+                                           
+                                         <label>first name</label><br>
+                                         <input type="text" name="Fname" id="Fname" placeholder="enter your first Name" /><br>
+                                         <label>last name</label><br>
+                                         <input type="text" name="Lname" id="Lname" placeholder="enter your last Name" /><br>
+                                         <label>date of birth</label><br>
+                                         <input type="date" name="DoB" id="DoB" placeholder="enter your date of birth"/><br>
+                                         <label>new password</label><br>
+                                         <input type="password" name="pass1" id="pass1" placeholder="new password" /><br>
+                                         <label> confirm password</label><br>
+                                         <input type="password" name="pass2" id="pass2" placeholder="confirm password" /><br>
+                                         <button type="button" id ="sup">Sign Up</button>
+                                         </form>
+                                     </div>
+                                     <script>
+                                        const Fname = document.getElementById("Fname");
+                                        const Lname = document.getElementById("Lname");
+                                        const sup = document.getElementById("sup");
+                                        const  DoB = document.getElementById("DoB");
+                                        const pass1 = document.getElementById("pass1");
+                                        const pass2 = document.getElementById("pass2");
+                                        sup.onclick = function(){
+                                       const p1 = pass1.value;
+                                      const  p2 = pass2.value;
+                                      if( p1 !== p2){
+        alert("the passwords does not match...!!!!!!");
+      
+    } else {
+       
+        localStorage.setItem('Fname',Fname);
+        localStorage.setItem('Lname',Lname);
+        localStorage.setItem('DoB',DoB);
+        alert("account created succesfully you can now log in..... welcome");
+      
+    }
+ 
+                                        }
+        
+                                      
+                                    </script>                          
+</body>
+</html>
